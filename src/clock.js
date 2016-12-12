@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import './clock.css';
+import Control from './clock.control'
 
 class Clock extends Component {
   constructor(props){
@@ -8,18 +10,31 @@ class Clock extends Component {
 
   render() {
     return (
-     <div>
-     {this.state.date.toLocaleTimeString()}
+   <div>
+     <div className='clock-box-style'>
+     	<span className='clock-text-style'>{this.state.date.toLocaleTimeString()}</span>
      </div>
+     <Control  start={this.start.bind(this)} stop={this.stop.bind(this)} />
+    </div>
     );
   }
 
   componentDidMount(){
-  	setInterval(this.tick.bind(this),1000);
+    this.start()
+  } 
+  componentWillUnmount(){
+    this.stop()
+  }
+
+  start(){
+    this.timer = setInterval(this.tick.bind(this),1000);
+  }
+  stop() {
+    clearInterval(this.timer)
   }
 
   tick(){
-  	this.setState({date : new Date()});
+  	this.setState({date : new Date()})
   }
 }
 

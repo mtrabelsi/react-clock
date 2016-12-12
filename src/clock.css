@@ -1,0 +1,10 @@
+.clock-box-style {
+	border-radius : 10px;
+	background-color: silver;
+	padding : 20px;
+	width: 5%;
+}
+
+.clock-text-style {
+	font-family: fantasy;
+}
