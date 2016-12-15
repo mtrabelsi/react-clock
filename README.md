@@ -1,4 +1,4 @@
-## Simple Clock for learning purposes :-)
+## Simple Clock for learning purpose :-)
 Use Stop the **button** to stop the tick. 
 ## Demo
 
