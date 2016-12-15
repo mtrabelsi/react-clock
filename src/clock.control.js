@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import './clock.control.css'
 
 class Control extends Component {
 	render(){
 		return (
-			<div>
+			<div className='control'>
 			  <button onClick={this.start.bind(this)}>start</button>
 			  <button onClick={this.stop.bind(this)}>stop</button>
 			</div>
